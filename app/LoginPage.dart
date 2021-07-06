@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
+import 'home_page.dart';
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,10 @@ class LoginPage extends StatelessWidget {
               SignInButton(
                 Buttons.FacebookNew,
                 text: "Login com Facebook",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => HomePage()));
+                },
               ),
               SizedBox(
                 height: 15.0,
